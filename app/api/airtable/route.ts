@@ -4,7 +4,7 @@ export async function POST(request: Request) {
     const records = [{ fields: data }];
 
     const response = await fetch(
-      "https://api.airtable.com/v0/appnCd1yfTghNwMMp/Elluxe%20Leads",
+      "https://api.airtable.com/v0/appm66Ee7Q3nJV9zQ/Leads",
       {
         method: "POST",
         headers: {
