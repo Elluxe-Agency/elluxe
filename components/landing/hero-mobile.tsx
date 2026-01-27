@@ -12,7 +12,7 @@ const HeroMobile = () => {
     >
       <div className="container mx-auto px-6">
         <div className="max-w-full flex flex-col items-center mt-[130px] gap-[42px]">
-          <div className="flex gap-[3px] items-center justify-center">
+          <div className="hidden gap-[3px] items-center justify-center ">
             <ShieldIcon className="h-[40px] w-[40px]" />
             <div className="flex flex-col text-[#E6E6E6]">
               <p className="text-[22px]/[16px] font-bold">24 million $</p>
