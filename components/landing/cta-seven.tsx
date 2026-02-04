@@ -10,8 +10,8 @@ const CTASeven = () => {
         <div className="flex flex-col items-start gap-8 md:gap-16">
           <FadeInAnimation>
           <h4 className="text-white text-h4-mobile md:text-h4">
-            Are you <span className="primary-gradient-text">truly</span>{" "}
-            satisfied with your current management?
+            Are you truly satisfied with your current management, <span className="primary-gradient-text">or being overwhelmed without a real structure?
+            </span>
           </h4>
           </FadeInAnimation>
           <div className="flex flex-col items-start gap-5 md:gap-8">

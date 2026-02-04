@@ -10,9 +10,7 @@ const CTAOne = () => {
         <div className="flex flex-col items-center gap-16">
           <FadeInAnimation>
             <h4 className="text-white text-h4-mobile md:text-h4 text-center">
-              Be honest, did you really dream of spending your{" "}
-              <span className="primary-gradient-text">youth</span> working until
-              you are old and tired?
+              Be honest, did you really dream of spending your youth working until you are <span className="primary-gradient-text">burned out</span>?
             </h4>
           </FadeInAnimation>
           <FadeInAnimation>
