@@ -25,12 +25,11 @@ const ServicesFour = () => {
             <p className="text-white text-description-mobile md:text-description leading-[22px] tracking-[2%] min-[1280px]:w-[495px]">
               We empower our models to take control of their financial futures.
               With expert guidance and support, we help them build independent
-              careers, ensuring a sustainable income beyond social media. Our
-              strategies are especially impactful for multimillionaire models,
-              enabling significant wealth growth through a personalized and
-              proven approach. No matter your current level of wealth or
-              influence, we are committed to helping you achieve lasting
-              financial success and stability.
+              careers that do not depend on a single platform. We work with
+              creators at every stage, from first launch to established
+              accounts, with a personalized plan and a team behind you. No
+              matter your current level, we are committed to doing the work
+              with you, every day.
             </p>
             <Link href="/apply-now"><Button className="min-[1280px]:hidden w-fit mt-4" variant="outline">Apply Now</Button></Link>
           </div>

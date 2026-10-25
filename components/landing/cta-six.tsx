@@ -16,12 +16,14 @@ const CTASix = () => {
           <div className="flex flex-col items-start gap-5 md:gap-10">
             <FadeInAnimation>
             <h4 className="text-white text-h4-mobile md:text-h4">
-              The more we help you earn, the more we grow together.
+              We only earn when you do.
             </h4>
             </FadeInAnimation>
             <FadeInAnimation>
             <h4 className="text-white text-h4-mobile md:text-h4">
-              Help us to help you, and we show you what true luxury feels like.
+              There is no upfront cost. Elluxe is paid a share of the net revenue of
+              the accounts we manage, agreed in writing before we start. The full
+              terms are in your management agreement.
             </h4>
             </FadeInAnimation>
           </div>

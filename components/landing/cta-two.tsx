@@ -9,29 +9,28 @@ const CTATwo = () => {
       <div className="container mx-auto px-6 py-[14rem] flex flex-col gap-32 items-center">
       <FadeInAnimation className="text-white text-h3-mobile md:text-h4 self-start w-5/6 md:w-1/2">
         <h4 >
-          No &quot;leading OnlyFans management&quot; fluff. Our agency is driven by
-          results.
+          No &quot;leading OnlyFans management&quot; fluff. A hands-on team that
+          runs your account like a business.
         </h4>
         </FadeInAnimation>
         <FadeInAnimation className="text-white text-h3-mobile md:text-h4 text-right md:text-left self-end w-5/6 md:w-1/2">
         <h4>
-          <span className="primary-gradient-text whitespace-nowrap">We rank in the top 5</span>
+          <span className="primary-gradient-text whitespace-nowrap">Management, marketing,</span>
           <br />
-          <span className="primary-gradient-text">worldwide</span> in revenue
-          earned by our models.
+          <span className="primary-gradient-text">security and support,</span> all
+          under one roof.
         </h4>
         </FadeInAnimation>
         <FadeInAnimation className="text-white text-h3-mobile md:text-h4 self-start w-5/6 md:w-1/2">
         <h4 >
-          Focus on building wealth, not chasing likes.
+          Focus on your content, not on admin.
         </h4>
         </FadeInAnimation>
         <FadeInAnimation className="text-white text-h3-mobile md:text-h4 text-right md:text-left self-end w-5/6 md:w-1/2">
         <h4 >
           We&apos;re not here{" "}
-          <span className="primary-gradient-text">to boast about</span> how we
-          generated <span className="primary-gradient-text">$millions</span> in
-          earnings or taken clients from $5k to $280K+ monthly.
+          <span className="primary-gradient-text">to boast.</span> We&apos;re here
+          to do the work, every day, with you.
         </h4>
         </FadeInAnimation>
         <div className="mt-16 flex flex-col items-center gap-32">

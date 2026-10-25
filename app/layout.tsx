@@ -60,7 +60,7 @@ const SFProDisplay = localFont({
 export const metadata: Metadata = {
   title: "Elluxe Management",
   description:
-    "Maximize your earnings, save time, and focus only on what matters",
+    "Talent management for creators: account management, marketing, 24/7 support and online safety. No upfront fees.",
 };
 
 export default function RootLayout({

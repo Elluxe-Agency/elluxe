@@ -25,8 +25,8 @@ const ServicesFive = () => {
                     marketing plan tailored to your brand and goals, we ensure
                     your success. From social media promotion to targeted
                     advertising and niche campaigns, we employ diverse
-                    strategies to help you reach the right audience and maximize
-                    your earnings.
+                    strategies to help you reach the right audience and grow
+                    your account.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4">
@@ -41,7 +41,7 @@ const ServicesFive = () => {
                     audience grows. Our team takes care of everything, from
                     optimizing your profile and setting subscription rates to
                     chatting 24/7 with your subscribers, building lasting
-                    connections that boost long-term earnings. This way, you can
+                    connections that support long-term growth. This way, you can
                     focus solely on what you do best: creating superb content
                     for your fans
                   </p>

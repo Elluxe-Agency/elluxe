@@ -15,7 +15,7 @@ const CTAFive = () => {
         <FadeInAnimation className="self-end">
         <div className="flex items-center gap-[0.875rem] md:gap-7">
           <p className="text-white text-services-link-mobile md:text-services-link">
-            <span className="primary-gradient-text">See more</span>  about how our<br/> work will increase your<br/> earnings
+            <span className="primary-gradient-text">See more</span>  about how<br/> we work with<br/> our creators
           </p>
           <Link href="/services" ><ArrowButton carousel={false} /></Link>
         </div>

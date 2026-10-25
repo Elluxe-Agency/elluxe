@@ -17,27 +17,27 @@ const Hero = () => {
               <span className="primary-gradient-text flex">
                 <StaggeredFade
                   className="text-primary-gradient-text "
-                  text="Your Profits."
+                  text="Your career."
                   delay={0}
                 />
                 <StaggeredFade
                   className="text-white ml-2 "
-                  text=" More,"
+                  text=" Managed,"
                   delay={1200}
                 />
               </span>
               <span className="text-white">
                 <StaggeredFade
                   className="text-white"
-                  text="Faster, Easier."
+                  text="protected, grown."
                   delay={1600}
                 />
               </span>
             </div>
             <FadeInAnimationLeft>
               <p className="text-white text-[1.25rem] md:text-[1.5rem] w-5/6 md:w-1/2">
-                Maximize your earnings, save time, and focus only on what
-                matters
+                We handle management, marketing and 24/7 support, so you can
+                focus on your content
               </p>
             </FadeInAnimationLeft>
           </div>

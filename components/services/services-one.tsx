@@ -14,8 +14,8 @@ const ServicesOne = () => {
           </FadeInAnimation>
           <FadeInAnimation>
           <h3 className="text-white text-h3-mobile md:text-h3 text-center">
-            <span className="primary-gradient-text">Your Profits.</span> More,
-            Faster, Easier.
+            <span className="primary-gradient-text">Your career.</span> Managed,
+            protected, grown.
           </h3>
           </FadeInAnimation>
         </div>

@@ -11,17 +11,17 @@ const CTAThree = () => {
           <h4>
             We provide all-inclusive talent management,{" "}
             <span className="primary-gradient-text">24/7</span> support across
-            all platforms and use proven marketing strategies to build fan
-            loyalty and <span className="primary-gradient-text"> maximize</span> your
-            revenue.
+            all platforms and use marketing strategies designed to build fan
+            loyalty and <span className="primary-gradient-text"> grow</span> your
+            account.
           </h4>
         </FadeInAnimation>
         <FadeInAnimation className="self-end">
           <div className="flex items-center gap-[0.875rem] md:gap-7" >
             <p className="text-white text-services-link-mobile md:text-services-link">
               <span className="primary-gradient-text">See more</span> of our
-              work and how it will
-              <br /> increase your earnings
+              work and how we
+              <br /> support our creators
             </p>
             <Link href="/services">
               <ArrowButton carousel={false} />

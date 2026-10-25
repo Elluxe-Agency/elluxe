@@ -23,8 +23,8 @@ const CTASeven = () => {
             </FadeInAnimation>
             <FadeInAnimation>
             <p className="text-white text-services-menu-mobile md:text-services-menu">
-              It’s just a few minutes, but it could{" "}
-              <span className="primary-gradient-text">change everything.</span>
+              It’s just a few minutes to find out{" "}
+              <span className="primary-gradient-text">whether we’re a fit.</span>
             </p>
             </FadeInAnimation>
           </div>

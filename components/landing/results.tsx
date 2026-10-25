@@ -29,8 +29,8 @@ const Results = () => {
     <section id={SECTIONS.RESULTS} className="w-full bg-marble-bg-big bg-cover">
       <div className="container mx-auto px-6 flex flex-col items-center gap-16 md:gap-24 py-32 md:pt-[9.6875rem] md:pb-[10.6875rem]">
         <h4 className="text-white text-h4-mobile md:text-h4 self-start">
-          Here’s what we can achieve{" "}
-          <span className="primary-gradient-text leading-[58px]">together</span>
+          What some of our creators{" "}
+          <span className="primary-gradient-text leading-[58px]">have achieved</span>
         </h4>
         <Carousel
           className="px-8 w-full relative"
@@ -58,6 +58,13 @@ const Results = () => {
           <CarouselPrevious className="hidden md:flex -left-6" />
           <CarouselNext className="hidden md:flex -right-6" />
         </Carousel>
+        <p className="text-white/90 text-[0.9rem] md:text-[1rem] leading-relaxed text-center max-w-[48rem] -mt-8 md:-mt-12">
+          Statements shown are from selected Elluxe clients, shared with their
+          permission. These results are not typical and are not a promise or
+          guarantee of future earnings. Individual results vary and depend on
+          your content, effort, audience and market conditions.{" "}
+          <Link className="underline" href="/earnings-disclaimer">Earnings disclaimer</Link>
+        </p>
         <Link href="/apply-now"><Button>Apply Now</Button></Link>
       </div>
     </section>

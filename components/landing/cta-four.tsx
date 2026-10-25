@@ -7,7 +7,13 @@ const CTAFour = () => {
       <div className="container mx-auto px-6 flex flex-col items-center py-32 md:pt-[16.25rem] md:pb-[16.25rem]">
         <FadeInAnimation className="text-white text-h4-mobile md:text-h4 w-full md:w-2/3">
           <h4>
-            We empower creators to build real wealth and achieve financial independence. Our multimillionaire models <span className="primary-gradient-text">experience</span> substantial wealth growth.
+            We <span className="primary-gradient-text">help</span> creators run
+            their accounts as a real business:{" "}
+            <span className="primary-gradient-text">
+              structure, support,
+            </span>{" "}
+            and a team that shows up{" "}
+            <span className="primary-gradient-text">every day.</span>
           </h4>
         </FadeInAnimation>
       </div>
