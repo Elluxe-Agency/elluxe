@@ -22,8 +22,8 @@ const CTAOne = () => {
           </FadeInAnimation>
           <FadeInAnimation>
             <h3 className="text-white text-h3-mobile md:text-h3 text-center">
-              Take some{" "}
-              <span className="primary-gradient-text">photos and retire.</span>
+              Build a business around your content,{" "}
+              <span className="primary-gradient-text">with a team behind you.</span>
             </h3>
           </FadeInAnimation>
         </div>
