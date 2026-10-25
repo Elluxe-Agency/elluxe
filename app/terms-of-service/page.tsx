@@ -19,6 +19,9 @@ You must be at least 18 years old and legally able to enter into contracts in yo
 Elluxe provides account management, marketing, messaging/chat support, social media management, website creation, creator networking and online-safety support, as described on the Site and detailed in the Management Agreement.
 **Fees:** we do not charge creators any upfront, setup or monthly fee. Elluxe is paid a share of the net revenue of the accounts we manage. The exact revenue split, the minimum-share ramp for new accounts, the term and the termination rules are set out in the Management Agreement, which you receive and can review before signing.
 
+## 3a. Growth terms for creators who already earn
+If your account was self-managed, and not managed by another agency, in the period before you join, we record a baseline from your platform earnings statements for that period. During the growth period set in your Management Agreement, Elluxe's share applies only to net revenue above that baseline, and net revenue at or below the baseline is paid to you in full. Conditions: you deliver the agreed content plan, grant the agreed account access, keep pricing and account settings as agreed, and share platform statements for verification. Platform suspensions caused by a breach on your side pause the growth period. The baseline period, the growth period and the split that follows are stated in your Management Agreement before you sign. The growth terms do not change the length of the agreement or any other term.
+
 ## 4. No earnings guarantee
 Any figures, statements, screenshots or testimonials on the Site are the results of specific clients and are **not typical**. They are not a promise, projection or guarantee of what you will earn. Results depend on your content, consistency, audience, platform rules and market conditions. See our Earnings Disclaimer.
 

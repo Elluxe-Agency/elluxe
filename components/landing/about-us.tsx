@@ -38,7 +38,7 @@ const AboutUs = () => {
           />
         </div>
         <Link className="self-center" href="/apply-now">
-          <Button>Apply Now</Button>
+          <Button>See if you qualify</Button>
         </Link>
       </div>
     </section>

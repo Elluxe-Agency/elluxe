@@ -41,7 +41,7 @@ const FadeInButton: React.FC<FadeInButtonProps> = ({
         animate={{ opacity: 1 }}
         transition={{ duration: textSpeed, delay: delay + iconSpeed }}
       >
-        Get Results
+        See if you qualify
       </motion.p>
       <motion.div initial="hidden" animate="visible" variants={variants(iconSpeed)}>
         <ArrowRightCircle className="w-[40px] h-[40px]" />

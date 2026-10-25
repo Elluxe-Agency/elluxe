@@ -22,15 +22,14 @@ const CTASix = () => {
             <FadeInAnimation>
             <h4 className="text-white text-h4-mobile md:text-h4">
               There is no upfront cost. Elluxe is paid a share of the net revenue of
-              the accounts we manage, agreed in writing before we start. The full
-              terms are in your management agreement.
+              the accounts we manage, agreed in writing before we start. Nothing else, ever.
             </h4>
             </FadeInAnimation>
           </div>
           <FadeInAnimation>
           <Link href="/apply-now">
             <Button className="mt-10" variant="default">
-              Apply Now
+              See if you qualify
             </Button>
           </Link>
           </FadeInAnimation>

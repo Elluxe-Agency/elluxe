@@ -29,7 +29,7 @@ const CTASeven = () => {
             </FadeInAnimation>
           </div>
           <FadeInAnimation>
-          <Link href="/apply-now"><Button variant="default">Apply Now</Button></Link>
+          <Link href="/apply-now"><Button variant="default">See if you qualify</Button></Link>
           </FadeInAnimation>
         </div>
       </div>

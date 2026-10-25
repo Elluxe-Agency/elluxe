@@ -17,20 +17,20 @@ const CTATwo = () => {
         <h4>
           <span className="primary-gradient-text whitespace-nowrap">Management, marketing,</span>
           <br />
-          <span className="primary-gradient-text">security and support,</span> all
-          under one roof.
+          <span className="primary-gradient-text">security and support.</span> One
+          team, one plan, every day.
         </h4>
         </FadeInAnimation>
         <FadeInAnimation className="text-white text-h3-mobile md:text-h4 self-start w-5/6 md:w-1/2">
         <h4 >
-          Focus on your content, not on admin.
+          <span className="primary-gradient-text">Focus on your content.</span> We handle everything else.
         </h4>
         </FadeInAnimation>
         <FadeInAnimation className="text-white text-h3-mobile md:text-h4 text-right md:text-left self-end w-5/6 md:w-1/2">
         <h4 >
           We&apos;re not here{" "}
           <span className="primary-gradient-text">to boast.</span> We&apos;re here
-          to do the work, every day, with you.
+          to do the work with you, and show you the numbers every week.
         </h4>
         </FadeInAnimation>
         <div className="mt-16 flex flex-col items-center gap-32">

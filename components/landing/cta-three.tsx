@@ -9,11 +9,11 @@ const CTAThree = () => {
       <div className="container mx-auto px-6 flex flex-col items-center gap-16 md:gap-[7rem] pb-32 md:pt-[6.25rem] md:pb-[12.0625rem]">
         <FadeInAnimation className="text-white text-h4-mobile md:text-h4 text-left md:text-center w-full md:w-2/4">
           <h4>
-            We provide all-inclusive talent management,{" "}
-            <span className="primary-gradient-text">24/7</span> support across
-            all platforms and use marketing strategies designed to build fan
-            loyalty and <span className="primary-gradient-text"> grow</span> your
-            account.
+            All-inclusive talent management: your inbox{" "}
+            <span className="primary-gradient-text">answered 24/7</span>, marketing
+            across every platform, and the structure to{" "}
+            <span className="primary-gradient-text">grow</span> your account
+            without burning out.
           </h4>
         </FadeInAnimation>
         <FadeInAnimation className="self-end">

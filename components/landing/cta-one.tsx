@@ -15,7 +15,7 @@ const CTAOne = () => {
           </FadeInAnimation>
           <FadeInAnimation>
             <Link href="/apply-now">
-              <Button variant="default">Apply Now</Button>
+              <Button variant="default">See if you qualify</Button>
             </Link>
           </FadeInAnimation>
           <FadeInAnimation>

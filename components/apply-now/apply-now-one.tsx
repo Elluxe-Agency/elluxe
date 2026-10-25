@@ -36,7 +36,7 @@ const ApplyNowOne = ({ isVip, updateField }: ApplyNowOneProps) => {
               />
             </div>
             <p className="text-white text-form-check">
-              If you&apos;re not there yet, leave this blank.
+              Not there yet? Leave this blank.
             </p>
           </div>
         </div>

@@ -65,7 +65,7 @@ const Results = () => {
           your content, effort, audience and market conditions.{" "}
           <Link className="underline" href="/earnings-disclaimer">Earnings disclaimer</Link>
         </p>
-        <Link href="/apply-now"><Button>Apply Now</Button></Link>
+        <Link href="/apply-now"><Button>See if you qualify</Button></Link>
       </div>
     </section>
   );

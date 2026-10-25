@@ -29,8 +29,8 @@ const HeroMobile = () => {
           </div>
           <div>
             <p className="text-center text-[#E6E6E6] text-[18px]/[22px] font-light tracking-wider">
-              Management, marketing and 24/7 support, <br />
-              so you can focus on your content
+              Managed, marketed and protected around the clock. <br />
+              No upfront cost. We only get paid when you do.
             </p>
           </div>
           <Link className="-mt-2" href="/apply-now">
