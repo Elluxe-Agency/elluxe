@@ -13,7 +13,7 @@ const CaseStudy = () => {
           </p>
           <h3 className="text-white text-h3-mobile md:text-h3 w-full md:w-3/4">
             From zero to the{" "}
-            <span className="primary-gradient-text">top 1%</span> in 90 days.
+            <span className="primary-gradient-text">top 1%</span>, in her first months.
           </h3>
         </FadeInAnimation>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -32,10 +32,10 @@ const CaseStudy = () => {
             </p>
           </FadeInAnimation>
           <FadeInAnimation className="flex flex-col gap-2 border-t border-white/20 pt-5">
-            <p className="primary-gradient-text text-[1.125rem] font-bold">Day 90</p>
+            <p className="primary-gradient-text text-[1.125rem] font-bold">First months</p>
             <p className="text-white/85 text-[1rem] md:text-[1.0625rem] leading-relaxed">
-              The account held OnlyFans&apos; top 1% creator ranking, run by the same team, on the
-              same deal we offer you.
+              The account reached OnlyFans&apos; top 1% creator ranking, run by the same team, on
+              the same deal we offer you.
             </p>
           </FadeInAnimation>
         </div>

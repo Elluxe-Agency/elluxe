@@ -1,15 +1,6 @@
 "use client"
 import Autoplay from "embla-carousel-autoplay";
 import {
-  ForbesLogo,
-  NYTimesLogo,
-  MediumLogo,
-  ViceLogo,
-  BloombergLogo,
-  YahooLogo,
-  LAWeeklyLogo,
-} from "../icons/featured-icons";
-import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -17,22 +8,15 @@ import {
 import FeaturedCarouselItem from "../ui/featured-carousel-item";
 import { SECTIONS } from "@/lib/const";
 
-const partnerLogos = [
-  { id: "ForbesLogo", logo: <ForbesLogo /> },
-  { id: "NYTimesLogo", logo: <NYTimesLogo /> },
-  { id: "MediumLogo", logo: <MediumLogo /> },
-  { id: "ViceLogo", logo: <ViceLogo /> },
-  { id: "BloombergLogo", logo: <BloombergLogo /> },
-  { id: "YahooLogo", logo: <YahooLogo /> },
-  { id: "LAWeeklyLogo", logo: <LAWeeklyLogo /> },
-  { id: "ForbesLogo", logo: <ForbesLogo /> },
-  { id: "NYTimesLogo", logo: <NYTimesLogo /> },
-  { id: "MediumLogo", logo: <MediumLogo /> },
-  { id: "ViceLogo", logo: <ViceLogo /> },
-  { id: "BloombergLogo", logo: <BloombergLogo /> },
-  { id: "YahooLogo", logo: <YahooLogo /> },
-  { id: "LAWeeklyLogo", logo: <LAWeeklyLogo /> },
-];
+const VALUES = ["Trust", "Integrity", "Transparency", "Discretion", "24/7 Support", "Written Terms", "Your Account Stays Yours"];
+const partnerLogos = [...VALUES, ...VALUES].map((v, i) => ({
+  id: `${v}-${i}`,
+  logo: (
+    <span className="whitespace-nowrap text-[#FCFEF0] text-[1rem] md:text-[1.125rem] font-semibold tracking-[0.18em] uppercase leading-none">
+      {v}
+    </span>
+  ),
+}));
 
 const Featured = () => {
   return (
