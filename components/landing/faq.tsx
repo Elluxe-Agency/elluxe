@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "Do you take beginners?",
-    a: "Yes, if you can commit the hours. Our case study started from zero.",
+    a: "Yes, if you can commit the hours. We build the persona, the plan and the accounts with you from a standing start.",
   },
   {
     q: "What happens after I apply?",
