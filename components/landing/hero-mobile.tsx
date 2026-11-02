@@ -1,6 +1,7 @@
 import { SECTIONS } from "@/lib/const";
 import { ShieldIcon } from "../icons/common";
 import Image from "next/image";
+import MobilePhone from "@/assets/images/mobile_chat.png";
 import FadeInButton from "../ui/fade-in-button";
 import Link from "next/link";
 
@@ -38,11 +39,10 @@ const HeroMobile = () => {
           </Link>
           <div>
             <Image
-              width={260}
-              height={318}
-              className="w-[260px]"
-              src="/images/hero-mobile-image.png"
-              alt="hero-mobile-image"
+              className="w-[260px] h-auto"
+              src={MobilePhone}
+              alt="Elluxe support chat on a phone"
+              priority
             />
           </div>
         </div>

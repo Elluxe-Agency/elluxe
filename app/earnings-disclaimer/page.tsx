@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 };
 
 const CONTENT = String.raw`# Earnings Disclaimer
-Last updated: 16 October 2026 · Elluxe Talent Management, a brand of High Life Vision LLC.
+Last updated: 2 November 2026 · Elluxe Talent Management, a brand of High Life Vision LLC.
 
-The earnings statements, screenshots, figures and testimonials shown on elluxe.co come from specific Elluxe clients, shared with their permission. **They are not typical results.** They show what some creators have achieved and are not a promise, projection or guarantee that you will achieve the same or any particular result.
+Elluxe does not display earnings figures, statements or income examples on this Site. If we ever refer to the past performance of a specific client, for example in a private consultation or a written proposal, that information comes from that client, shared with their permission. **It is not a typical result.** It is not a promise, projection or guarantee that you will achieve the same or any particular result.
 
 Your results depend on factors we do not control: the content you create, how consistently you work, your existing audience, platform policies and fees, competition and market conditions. Many creators earn far less than the figures shown, and some earn nothing. Elluxe makes no claim about typical or average earnings of creators on any platform.
 

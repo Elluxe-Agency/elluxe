@@ -47,10 +47,10 @@ const Navbar = () => {
               <li className="cursor-pointer">Services</li>
             </Link>
             <li
-              onClick={() => handleNavigation(SECTIONS.RESULTS)}
+              onClick={() => handleNavigation(SECTIONS.CASESTUDY)}
               className="cursor-pointer"
             >
-              Results
+              How it works
             </li>
             <li
               onClick={() => handleNavigation(SECTIONS.CONTACTUS)}
@@ -97,10 +97,10 @@ const Navbar = () => {
                 <li className="cursor-pointer">Services</li>
               </Link>
               <li
-                onClick={() => handleMobileScroll(SECTIONS.RESULTS)}
+                onClick={() => handleMobileScroll(SECTIONS.CASESTUDY)}
                 className="cursor-pointer"
               >
-                Results
+                How it works
               </li>
               <li
                 onClick={() => handleMobileScroll(SECTIONS.CONTACTUS)}

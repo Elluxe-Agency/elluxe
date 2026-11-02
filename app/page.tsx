@@ -12,7 +12,6 @@ import CTATwo from "@/components/landing/cta-two";
 import Featured from "@/components/landing/featured";
 import Hero from "@/components/landing/hero";
 import HeroMobile from "@/components/landing/hero-mobile";
-import Results from "@/components/landing/results";
 import GrowthDeal from "@/components/landing/growth-deal";
 import CaseStudy from "@/components/landing/case-study";
 import Faq from "@/components/landing/faq";
@@ -28,7 +27,6 @@ export default function Home() {
       <CTATwo/>
       <CTAThree/>
       <GrowthDeal/>
-      <Results/>
       <CaseStudy/>
       <CTAFour/>
       <CTAFive/>

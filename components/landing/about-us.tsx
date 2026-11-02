@@ -21,7 +21,7 @@ const AboutUs = () => {
             height="1080"
             className="rounded-[20px] aspect-[2/3] object-none md:object-contain md:aspect-auto"
             src="/videos/elluxe_desktop.mp4"
-            poster="/gifs/elluxe_desktop_gif.gif"
+            poster="/images/video-poster-desktop.jpg"
             playsInline
             preload="none"
           />
@@ -32,7 +32,7 @@ const AboutUs = () => {
             height="1080"
             className="rounded-[20px] aspect-[9/16] object-cover md:object-contain md:aspect-auto"
             src="/videos/elluxe_mobile.mp4"
-            poster="/gifs/elluxe_mobile_gif.gif"
+            poster="/images/video-poster-mobile.jpg"
             playsInline
             preload="none"
           />

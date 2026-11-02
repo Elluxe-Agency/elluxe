@@ -26,7 +26,7 @@ const LegalRow = () => (
       Elluxe Talent Management is a brand of High Life Vision LLC, 30 N Gould
       St, Ste R, Sheridan, WY 82801, United States. No upfront fees: we are
       paid a share of net revenue under a written management agreement.
-      Earnings shown on this site are not typical; individual results vary.
+      We do not guarantee any income or outcome; individual results vary.
     </p>
     <p>©2026 Elluxe Talent Management. All rights reserved.</p>
   </div>
@@ -68,10 +68,10 @@ const Footer = () => {
             <li className="cursor-pointer">Services</li>
           </Link>
           <li
-            onClick={() => handleNavigation(SECTIONS.RESULTS)}
+            onClick={() => handleNavigation(SECTIONS.CASESTUDY)}
             className="cursor-pointer"
           >
-            Results
+            How it works
           </li>
           <li
             onClick={() => handleNavigation(SECTIONS.CONTACTUS)}

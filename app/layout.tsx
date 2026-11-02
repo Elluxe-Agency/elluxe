@@ -79,11 +79,6 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/images/hero-mobile-image.png"
-          as="image"
-        />
-        <link
-          rel="preload"
           href="/images/hero-bg.jpg"
           as="image"
         />
