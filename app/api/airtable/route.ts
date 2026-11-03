@@ -1,4 +1,32 @@
+const ALLOWED_ORIGINS = [
+  "https://elluxe.cc",
+  "https://www.elluxe.cc",
+  "https://elluxe-cc.pages.dev",
+];
+
+function corsHeaders(origin: string | null): Record<string, string> {
+  const ok =
+    !!origin &&
+    (ALLOWED_ORIGINS.includes(origin) || origin.endsWith(".elluxe-cc.pages.dev"));
+  return ok
+    ? {
+        "Access-Control-Allow-Origin": origin as string,
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        Vary: "Origin",
+      }
+    : {};
+}
+
+export async function OPTIONS(request: Request) {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders(request.headers.get("origin")),
+  });
+}
+
 export async function POST(request: Request) {
+  const cors = corsHeaders(request.headers.get("origin"));
   try {
     const data = await request.json();
     const records = [{ fields: data }];
@@ -23,6 +51,7 @@ export async function POST(request: Request) {
       headers: {
         "Cache-Control": "no-store",
         "Content-Type": "application/json",
+        ...cors,
       },
     });
   } catch (error) {
@@ -33,6 +62,7 @@ export async function POST(request: Request) {
         headers: {
           "Cache-Control": "no-store",
           "Content-Type": "application/json",
+          ...cors,
         },
       }
     );
