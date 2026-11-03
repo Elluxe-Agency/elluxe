@@ -10,6 +10,7 @@ import CTAThree from "@/components/landing/cta-three";
 import CTATwo from "@/components/landing/cta-two";
 import Featured from "@/components/landing/featured";
 import Hero from "@/components/landing/hero";
+import LiveCall from "@/components/landing/live-call";
 import HeroMobile from "@/components/landing/hero-mobile";
 import GrowthDeal from "@/components/landing/growth-deal";
 import CaseStudy from "@/components/landing/case-study";
@@ -22,6 +23,7 @@ export default function Home() {
       <HeroMobile/>
       <Featured />
       <CTAOne />
+      <LiveCall />
       <CTATwo/>
       <CTAThree/>
       <GrowthDeal/>
