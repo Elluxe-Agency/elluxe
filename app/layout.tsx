@@ -58,7 +58,8 @@ const SFProDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Elluxe Management",
+  metadataBase: new URL("https://elluxe.cc"),
+  title: "Elluxe Talent Management",
   description:
     "Talent management for creators: account management, marketing, 24/7 support and online safety. No upfront fees.",
 };

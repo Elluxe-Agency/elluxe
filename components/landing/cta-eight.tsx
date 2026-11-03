@@ -9,7 +9,7 @@ const CTAEight = () => {
             <h3 className="text-h3-mobile md:text-h3 primary-gradient-text text-center">Trust, Integrity, Transparency</h3>
             </FadeInAnimation>
             <FadeInAnimation>
-            <p className="text-white text-sub-title-mobile md:text-sub-title text-center">We are on our way to the top. And we’d like to take you with us.</p>
+            <p className="text-white text-sub-title-mobile md:text-sub-title text-center">Written terms, a named team and daily work on your account. That is the whole offer.</p>
             </FadeInAnimation>
           </div>
       </section>

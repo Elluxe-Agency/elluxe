@@ -49,7 +49,7 @@ const ApplyNow = () => {
     if (isLastStep && !isSubmitting) {
       setIsSubmitting(true);
       try {
-        const response = await fetch("/api/airtable", {
+        const response = await fetch("https://elluxe.co/api/airtable", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

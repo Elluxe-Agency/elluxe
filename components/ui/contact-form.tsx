@@ -72,13 +72,14 @@ const ContactForm = () => {
           formData.append(key, value.toString());
         }
       }
-      const res = await fetch("/__forms.html", {
+      const res = await fetch("https://elluxe.co/__forms.html", {
         method: "POST",
+        mode: "no-cors",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         // It was: (formData as any) for future reference
         body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
-      if (res.status === 200) {
+      if (res.ok || res.type === "opaque") {
         form.reset();
         toast({
           title: "Message sent successfully!",

@@ -23,7 +23,7 @@ const ServicesFour = () => {
               </p>
             </div>
             <p className="text-white text-description-mobile md:text-description leading-[22px] tracking-[2%] min-[1280px]:w-[495px]">
-              We empower our models to take control of their financial futures.
+              We empower our models to take control of their careers.
               With expert guidance and support, we help them build independent
               careers that do not depend on a single platform. We work with
               creators at every stage, from first launch to established

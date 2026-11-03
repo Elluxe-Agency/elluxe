@@ -37,12 +37,6 @@ const Navbar = () => {
             <ElluxeLogo className="h-[24px] w-[150px] md:h-[38px] md:w-[200px]" />
           </Link>
           <ul className="text-white text-navigation gap-6 hidden md:flex">
-            <li
-              onClick={() => handleNavigation(SECTIONS.ABOUTUS)}
-              className="cursor-pointer"
-            >
-              About Us
-            </li>
             <Link  onClick={() => setOpen(!open)} href="/services">
               <li className="cursor-pointer">Services</li>
             </Link>
@@ -87,12 +81,6 @@ const Navbar = () => {
         <div className="pl-3 pr-6 mt-3 absolute w-full md:hidden">
           <div className="rounded-[24px] bg-featured-card-bg w-full">
             <ul className="text-white text-navigation flex flex-col items-center gap-6 py-8">
-              <li
-                onClick={() => handleMobileScroll(SECTIONS.ABOUTUS)}
-                className="cursor-pointer"
-              >
-                About Us
-              </li>
               <Link onClick={() => setOpen(!open)} href="/services">
                 <li className="cursor-pointer">Services</li>
               </Link>

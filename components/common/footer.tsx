@@ -58,12 +58,6 @@ const Footer = () => {
       <div className="container mx-auto py-8 md:pt-[53px] md:pb-[18px]">
         <div className="h-px w-full bg-white" />
         <ul className="text-white text-[1rem] gap-6 flex justify-center my-7 md:mt-4 md:mb-9 px-6">
-          <li
-            onClick={() => handleNavigation(SECTIONS.ABOUTUS)}
-            className="cursor-pointer"
-          >
-            About Us
-          </li>
           <Link href="/services">
             <li className="cursor-pointer">Services</li>
           </Link>

@@ -1,4 +1,3 @@
-import AboutUs from "@/components/landing/about-us";
 import Branches from "@/components/landing/branches";
 import ContactUs from "@/components/landing/contact-us";
 import CTAEight from "@/components/landing/cta-eight";
@@ -23,7 +22,6 @@ export default function Home() {
       <HeroMobile/>
       <Featured />
       <CTAOne />
-      <AboutUs />
       <CTATwo/>
       <CTAThree/>
       <GrowthDeal/>

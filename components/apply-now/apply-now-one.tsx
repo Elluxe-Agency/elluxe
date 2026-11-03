@@ -19,8 +19,8 @@ const ApplyNowOne = ({ isVip, updateField }: ApplyNowOneProps) => {
           <div className="flex flex-col items-start gap-4 md:gap-[33px]">
             <div className="text-white flex flex-row-reverse gap-6">
               <label className="!text-form-check">
-                Please check this box if you already earn over $10,000 per month
-                from OnlyFans, in which case you will be enrolled in our VIP
+                Please check this box if you already run an established, active
+                OnlyFans account, in which case you will be enrolled in our VIP
                 program.
               </label>
 
