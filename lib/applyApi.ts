@@ -1,6 +1,8 @@
 // Application API: live Instagram/TikTok/Facebook profile check while the creator fills the form,
 // and the submit that stores the lead only when the profile is confirmed.
 // Same-origin path first (Cloudflare Pages Function proxy), direct VPS host as fallback.
+import { getAttribution } from "@/lib/attribution";
+
 const BASES = ["/api/apply", "https://srv1044691.hstgr.cloud/apply"];
 const CHECK_TIMEOUT_MS = 60000;
 
@@ -71,7 +73,8 @@ export type SubmitResult =
 export async function submitApplication(
   data: Record<string, unknown>
 ): Promise<SubmitResult> {
-  const r = await post("submit", data, 90000);
+  const payload = { ...data, attribution: getAttribution() };
+  const r = await post("submit", payload, 90000);
   if (r.ok) return { ok: true };
   const body = await r.json().catch(() => ({}));
   if (r.status === 422 && body.error === "social")

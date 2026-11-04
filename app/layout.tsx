@@ -6,6 +6,7 @@ import Footer from "@/components/common/footer";
 import { Toaster } from "@/components/ui/toaster";
 import GoogleAnalyticsScripts from "@/components/analytics";
 import ClarityTrackingScript from "@/components/clarity";
+import AttributionCapture from "@/components/attribution";
 
 const SFProDisplay = localFont({
   src: [
@@ -98,6 +99,7 @@ export default function RootLayout({
         <ClarityTrackingScript />
       </head>
       <body className={SFProDisplay.className}>
+        <AttributionCapture />
         <Navbar />
         {children}
         <Footer />
