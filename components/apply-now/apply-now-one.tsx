@@ -52,9 +52,6 @@ const ApplyNowOne = ({ vipAnswer, updateField }: ApplyNowOneProps) => {
             the best help for what you need, whether you are starting out or
             already established.
           </p>
-          <p className="text-white text-form-check">
-            Not there yet? Leave this blank.
-          </p>
         </div>
       </div>
     </section>
