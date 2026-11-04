@@ -1,45 +1,60 @@
 type ApplyNowOne = {
   isVip: boolean;
+  vipAnswer: "" | "yes" | "no";
 };
 
 type ApplyNowOneProps = ApplyNowOne & {
-  updateField: (field: ApplyNowOne) => void;
+  updateField: (field: Partial<ApplyNowOne>) => void;
 };
 
-const ApplyNowOne = ({ isVip, updateField }: ApplyNowOneProps) => {
+const OPTIONS: { id: "yes" | "no"; label: string }[] = [
+  { id: "yes", label: "Yes" },
+  { id: "no", label: "No" },
+];
+
+const ApplyNowOne = ({ vipAnswer, updateField }: ApplyNowOneProps) => {
   return (
-    <section className="w-full h-[70vh] bg-primary-black">
-      <div className="container mx-auto flex flex-col gap-16 px-6 pt-[146px]">
+    <section className="w-full min-h-[70vh] bg-primary-black">
+      <div className="container mx-auto flex flex-col gap-10 px-6 pt-[146px]">
         <div className="flex items-center justify-between">
           <h1 className="text-white text-h3-mobile md:text-h3 w-full md:w-3/4">
-            1. VIP program
+            1. Where are you at right now?
           </h1>
         </div>
-        <div className="flex flex-col gap-8 md:gap-10 items-start">
-          <div className="flex flex-col items-start gap-4 md:gap-[33px]">
-            <div className="text-white flex flex-row-reverse gap-6">
-              <label className="!text-form-check">
-                Do you have an active OnlyFans account that has ever generated
-                more than $10,000 in a single month? It doesn&apos;t have to be
-                right now. If yes, check this box and you will be enrolled in
-                our VIP program.
-              </label>
-
-              <input
-                checked={isVip}
-                onChange={(e) =>
-                  updateField({
-                    isVip: e.target.checked
-                  })
+        <div className="flex flex-col gap-6 items-start md:w-3/4">
+          <p className="text-white !text-form-check">
+            Do you have an active OnlyFans account currently generating over
+            $3,000 a month?
+          </p>
+          <div className="flex gap-3" role="radiogroup" aria-label="Answer">
+            {OPTIONS.map((o) => (
+              <button
+                key={o.id}
+                type="button"
+                role="radio"
+                aria-checked={vipAnswer === o.id}
+                onClick={() =>
+                  updateField({ vipAnswer: o.id, isVip: o.id === "yes" })
                 }
-                type="checkbox"
-                className="w-[25px] h-[25px] accent-[#3D3F43] rounded-[4px] shadow-inner bg-[#3D3F43]"
-              />
-            </div>
-            <p className="text-white text-form-check">
-              Not there yet? Leave this blank.
-            </p>
+                className={`px-7 py-2 rounded-full border text-form-check ${
+                  vipAnswer === o.id
+                    ? "bg-white text-primary-black border-white"
+                    : "bg-transparent text-white border-white/50"
+                }`}
+              >
+                {o.label}
+              </button>
+            ))}
           </div>
+          <p className="text-white text-description">
+            There is no good or bad answer here. We just want to understand
+            which stage you are at, so we can direct you to the right team and
+            the best help for what you need, whether you are starting out or
+            already established.
+          </p>
+          <p className="text-white text-form-check">
+            Not there yet? Leave this blank.
+          </p>
         </div>
       </div>
     </section>

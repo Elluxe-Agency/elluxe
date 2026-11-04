@@ -26,6 +26,7 @@ import { FormEvent, useRef, useState } from "react";
 
 type ApplicationFormData = {
   isVip: boolean;
+  vipAnswer: "" | "yes" | "no";
   firstName: string;
   age: number;
   location: string;
@@ -37,6 +38,7 @@ type ApplicationFormData = {
 };
 const INITIAL_DATA: ApplicationFormData = {
   isVip: false,
+  vipAnswer: "",
   firstName: "",
   age: 18,
   location: "",
