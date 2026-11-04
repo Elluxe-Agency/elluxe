@@ -21,12 +21,20 @@ const ApplyNowOne = ({ vipAnswer, updateField }: ApplyNowOneProps) => {
             1. Where are you at right now?
           </h1>
         </div>
-        <div className="flex flex-col gap-6 items-start md:w-3/4">
-          <p className="text-white !text-form-check">
-            Do you have an active OnlyFans account currently generating over
-            $3,000 a month?
-          </p>
-          <div className="flex gap-3" role="radiogroup" aria-label="Answer">
+        <div className="flex flex-col gap-8 items-start md:w-3/4">
+          <div className="flex flex-col gap-3">
+            <p className="text-white !text-form-check">
+              Do you have an active OnlyFans account currently generating over
+              $3,000 a month?
+            </p>
+            <p className="text-white/70 text-sm font-normal leading-snug">
+              There is no good or bad answer here. We just want to understand
+              which stage you are at, so we can direct you to the right team
+              and the best help for what you need, whether you are starting
+              out or already established.
+            </p>
+          </div>
+          <div className="flex gap-4" role="radiogroup" aria-label="Answer">
             {OPTIONS.map((o) => (
               <button
                 key={o.id}
@@ -36,7 +44,7 @@ const ApplyNowOne = ({ vipAnswer, updateField }: ApplyNowOneProps) => {
                 onClick={() =>
                   updateField({ vipAnswer: o.id, isVip: o.id === "yes" })
                 }
-                className={`px-7 py-2 rounded-full border text-form-check ${
+                className={`px-10 py-3 rounded-full border text-form-text font-semibold ${
                   vipAnswer === o.id
                     ? "bg-white text-primary-black border-white"
                     : "bg-transparent text-white border-white/50"
@@ -46,12 +54,6 @@ const ApplyNowOne = ({ vipAnswer, updateField }: ApplyNowOneProps) => {
               </button>
             ))}
           </div>
-          <p className="text-white text-description">
-            There is no good or bad answer here. We just want to understand
-            which stage you are at, so we can direct you to the right team and
-            the best help for what you need, whether you are starting out or
-            already established.
-          </p>
         </div>
       </div>
     </section>
