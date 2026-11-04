@@ -13,9 +13,15 @@ import { Button } from "@/components/ui/button";
 import ProgressCircle from "@/components/ui/progress-circle";
 
 import { useMultistepForm } from "@/lib/useMultistepForm";
+import {
+  SocialCheck,
+  UNCHECKED,
+  checkSocial,
+  submitApplication,
+} from "@/lib/applyApi";
 import { useRouter } from "next/navigation";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 
 type ApplicationFormData = {
   isVip: boolean;
@@ -41,30 +47,63 @@ const INITIAL_DATA: ApplicationFormData = {
 const ApplyNow = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [applicationFormData, setApplicationFormData] = useState(INITIAL_DATA);
+  const [socialCheck, setSocialCheck] = useState<SocialCheck | null>(null);
+  const [checking, setChecking] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const checkedFor = useRef("");
   const router = useRouter();
+  const SOCIAL_STEP = 4;
+
+  // Live Instagram/TikTok check: the profile must exist before she can continue.
+  const verifySocial = async (value: string): Promise<SocialCheck | null> => {
+    const v = value.trim();
+    if (!v) return null;
+    if (checkedFor.current === v && socialCheck) return socialCheck;
+    setChecking(true);
+    try {
+      const r = await checkSocial(v);
+      checkedFor.current = v;
+      setSocialCheck(r);
+      return r;
+    } catch {
+      checkedFor.current = v;
+      setSocialCheck(UNCHECKED);
+      return UNCHECKED;
+    } finally {
+      setChecking(false);
+    }
+  };
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!isLastStep) return next();
+    if (!isLastStep) {
+      if (currentStepIndex === SOCIAL_STEP) {
+        if (checking) return;
+        const r = await verifySocial(applicationFormData.socialMedia);
+        if (!r || !r.accepted) return;
+      }
+      return next();
+    }
     if (isLastStep && !isSubmitting) {
       setIsSubmitting(true);
+      setSubmitError("");
       try {
-        const response = await fetch("https://elluxe.co/api/airtable", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(applicationFormData),
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to submit form");
+        const result = await submitApplication(applicationFormData);
+        if (result.ok) {
+          setApplicationFormData(INITIAL_DATA);
+          router.push("/thank-you");
+          return;
         }
-
-        setApplicationFormData(INITIAL_DATA);
-        router.push("/thank-you");
+        if (result.error === "social") {
+          setSocialCheck(result.check);
+          checkedFor.current = applicationFormData.socialMedia.trim();
+          goTo(SOCIAL_STEP);
+          return;
+        }
+        setSubmitError(result.message);
       } catch (error) {
         console.error("Error submitting form:", error);
+        setSubmitError("We couldn't send your application. Please try again.");
       } finally {
         setIsSubmitting(false);
       }
@@ -76,8 +115,16 @@ const ApplyNow = () => {
     });
   };
 
-  const { step, isFirstStep, isLastStep, steps, currentStepIndex, back, next } =
-    useMultistepForm([
+  const {
+    step,
+    isFirstStep,
+    isLastStep,
+    steps,
+    currentStepIndex,
+    back,
+    next,
+    goTo,
+  } = useMultistepForm([
       <ApplyNowOne
         key={"one"}
         {...applicationFormData}
@@ -102,6 +149,9 @@ const ApplyNow = () => {
         key={"five"}
         {...applicationFormData}
         updateField={updateField}
+        socialCheck={socialCheck}
+        checking={checking}
+        onCheck={verifySocial}
       />,
       <ApplyNowSix
         key={"six"}
@@ -142,10 +192,25 @@ const ApplyNow = () => {
                 Previous
               </Button>
             )}
-            <Button type="submit" variant="default" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : isLastStep ? "Submit" : "Next"}
+            <Button
+              type="submit"
+              variant="default"
+              disabled={isSubmitting || checking}
+            >
+              {isSubmitting
+                ? "Submitting..."
+                : checking
+                  ? "Checking..."
+                  : isLastStep
+                    ? "Submit"
+                    : "Next"}
             </Button>
           </div>
+          {submitError && (
+            <p className="text-red-400 text-description px-6 pt-4">
+              {submitError}
+            </p>
+          )}
         </form>
       </div>
     </div>
