@@ -14,6 +14,7 @@ import ProgressCircle from "@/components/ui/progress-circle";
 
 import { useMultistepForm } from "@/lib/useMultistepForm";
 import {
+  Platform,
   SocialCheck,
   UNCHECKED,
   checkSocial,
@@ -29,6 +30,7 @@ type ApplicationFormData = {
   age: number;
   location: string;
   socialMedia: string;
+  socialPlatform: Platform;
   onlyFansAccountLink: string;
   contactInfo: string;
   message: string;
@@ -39,6 +41,7 @@ const INITIAL_DATA: ApplicationFormData = {
   age: 18,
   location: "",
   socialMedia: "",
+  socialPlatform: "instagram",
   onlyFansAccountLink: "",
   contactInfo: "",
   message: "",
@@ -58,15 +61,16 @@ const ApplyNow = () => {
   const verifySocial = async (value: string): Promise<SocialCheck | null> => {
     const v = value.trim();
     if (!v) return null;
-    if (checkedFor.current === v && socialCheck) return socialCheck;
+    const key = `${applicationFormData.socialPlatform}:${v}`;
+    if (checkedFor.current === key && socialCheck) return socialCheck;
     setChecking(true);
     try {
-      const r = await checkSocial(v);
-      checkedFor.current = v;
+      const r = await checkSocial(v, applicationFormData.socialPlatform);
+      checkedFor.current = key;
       setSocialCheck(r);
       return r;
     } catch {
-      checkedFor.current = v;
+      checkedFor.current = "";
       setSocialCheck(UNCHECKED);
       return UNCHECKED;
     } finally {
@@ -96,7 +100,7 @@ const ApplyNow = () => {
         }
         if (result.error === "social") {
           setSocialCheck(result.check);
-          checkedFor.current = applicationFormData.socialMedia.trim();
+          checkedFor.current = `${applicationFormData.socialPlatform}:${applicationFormData.socialMedia.trim()}`;
           goTo(SOCIAL_STEP);
           return;
         }

@@ -1,10 +1,14 @@
-// Application API on the Elluxe VPS: live Instagram/TikTok profile check while the creator fills
-// the form, and the submit that stores the lead only when the profile is real.
-export const APPLY_API = "https://srv1044691.hstgr.cloud/apply";
+// Application API: live Instagram/TikTok/Facebook profile check while the creator fills the form,
+// and the submit that stores the lead only when the profile is confirmed.
+// Same-origin path first (Cloudflare Pages Function proxy), direct VPS host as fallback.
+const BASES = ["/api/apply", "https://srv1044691.hstgr.cloud/apply"];
+const CHECK_TIMEOUT_MS = 60000;
+
+export type Platform = "instagram" | "tiktok" | "facebook";
 
 export type SocialCheck = {
   status: "ok" | "private" | "not_found" | "junk" | "unchecked";
-  platform: "instagram" | "tiktok" | null;
+  platform: Platform | null;
   handle: string | null;
   followers: number | null;
   profile_url: string;
@@ -18,16 +22,43 @@ export const UNCHECKED: SocialCheck = {
   handle: null,
   followers: null,
   profile_url: "",
-  accepted: true,
-  message: "We couldn't verify this right now — you can continue.",
+  accepted: false,
+  message:
+    "We couldn't reach our verification service. Please try again in a moment.",
 };
 
-export async function checkSocial(social: string): Promise<SocialCheck> {
-  const r = await fetch(`${APPLY_API}/check`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ social }),
-  });
+async function post(path: string, body: unknown, timeoutMs: number): Promise<Response> {
+  let lastErr: unknown = null;
+  for (const base of BASES) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const r = await fetch(`${base}/${path}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        signal: ctrl.signal,
+      });
+      // a 404/405/5xx from the proxy layer itself (e.g. local preview without functions) → try the next base
+      if (r.status === 404 || r.status === 405 || r.status === 502 || r.status === 503 || r.status === 504) {
+        lastErr = new Error(`${base}: ${r.status}`);
+        continue;
+      }
+      return r;
+    } catch (e) {
+      lastErr = e;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  throw lastErr ?? new Error("unreachable");
+}
+
+export async function checkSocial(
+  social: string,
+  platform: Platform
+): Promise<SocialCheck> {
+  const r = await post("check", { social, platform }, CHECK_TIMEOUT_MS);
   if (!r.ok) throw new Error(`check ${r.status}`);
   return (await r.json()) as SocialCheck;
 }
@@ -40,11 +71,7 @@ export type SubmitResult =
 export async function submitApplication(
   data: Record<string, unknown>
 ): Promise<SubmitResult> {
-  const r = await fetch(`${APPLY_API}/submit`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  const r = await post("submit", data, 90000);
   if (r.ok) return { ok: true };
   const body = await r.json().catch(() => ({}));
   if (r.status === 422 && body.error === "social")
