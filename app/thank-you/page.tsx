@@ -9,7 +9,7 @@ const ThankYou = () => {
       <Script id="ads-conversion" strategy="afterInteractive">
         {`
           gtag('event', 'conversion', {
-            'send_to': 'AW-17004758938/T-SPCMeq4LoaEJqPwKw_'
+            'send_to': 'AW-17909666298/HVbqCN6g6O0bEPqj_9tC'
           });
         `}
       </Script>
